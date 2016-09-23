@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WardrobeProject.Models.Color>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.colorName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.colorName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.colorID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.colorID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.colorID })
+        </td>
+    </tr>
+}
+
+</table>

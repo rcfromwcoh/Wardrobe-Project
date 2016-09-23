@@ -1,0 +1,34 @@
+﻿@model WardrobeProject.Models.Accessory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Accessory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.accessoryItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.accessoryItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.accessoryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

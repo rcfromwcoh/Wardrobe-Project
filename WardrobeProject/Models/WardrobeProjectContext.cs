@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace WardrobeProject.Models
+{
+    public class WardrobeProjectContext : DbContext
+    {
+        // You can add custom code to this file. Changes will not be overwritten.
+        // 
+        // If you want Entity Framework to drop and regenerate your database
+        // automatically whenever you change your model schema, please use data migrations.
+        // For more information refer to the documentation:
+        // http://msdn.microsoft.com/en-us/data/jj591621.aspx
+    
+        public WardrobeProjectContext() : base("name=WardrobeProjectContext")
+        {
+        }
+
+        public System.Data.Entity.DbSet<WardrobeProject.Models.Shoe> Shoes { get; set; }
+
+        public System.Data.Entity.DbSet<WardrobeProject.Models.Accessory> Accessories { get; set; }
+
+        public System.Data.Entity.DbSet<WardrobeProject.Models.Bottom> Bottoms { get; set; }
+
+        public System.Data.Entity.DbSet<WardrobeProject.Models.Color> Colors { get; set; }
+
+        public System.Data.Entity.DbSet<WardrobeProject.Models.Occasion> Occasions { get; set; }
+
+        public System.Data.Entity.DbSet<WardrobeProject.Models.Outfit> Outfits { get; set; }
+
+        public System.Data.Entity.DbSet<WardrobeProject.Models.Season> Seasons { get; set; }
+
+        public System.Data.Entity.DbSet<WardrobeProject.Models.Top> Tops { get; set; }
+
+        public System.Data.Entity.DbSet<WardrobeProject.Models.Type> Types { get; set; }
+    }
+}

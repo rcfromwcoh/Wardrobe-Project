@@ -1,0 +1,34 @@
+﻿@model WardrobeProject.Models.Bottom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bottom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bottomItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bottomItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.bottomID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

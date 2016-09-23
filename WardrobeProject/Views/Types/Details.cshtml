@@ -1,0 +1,66 @@
+﻿@model WardrobeProject.Models.Type
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Type</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Accessory.accessoryItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accessory.accessoryItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bottom.bottomItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bottom.bottomItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shoe.shoeItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shoe.shoeItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Top.topItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Top.topItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typeItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typeItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.photo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.typeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

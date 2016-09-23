@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WardrobeProject.Models.Type>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Accessory.accessoryItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bottom.bottomItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shoe.shoeItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Top.topItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.typeItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.photo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Accessory.accessoryItemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bottom.bottomItemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Shoe.shoeItemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Top.topItemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.typeItemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.photo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.typeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.typeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.typeID })
+        </td>
+    </tr>
+}
+
+</table>
